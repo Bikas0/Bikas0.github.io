@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Gallery</title>
+<style>
+  /* Reset styles */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Styles for gallery */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 10px;
+    margin: 20px;
+    /* Fixed height for the gallery container */
+    height: auto; /* Changed to auto so that it adjusts based on content */
+    overflow: hidden; /* Ensure images don't overflow */
+  }
+
+  .gallery .image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .gallery .image:hover {
+    transform: translateY(-5px);
+  }
+
+  .gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio */
+    cursor: pointer; /* Add cursor pointer */
+    transition: transform 0.3s ease;
+  }
+
+  .gallery img:hover {
+    transform: scale(1.05);
+  }
+
+  .filter-buttons {
+    margin: 20px;
+    text-align: center;
+  }
+
+  .filter-buttons button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .filter-buttons button:hover {
+    background-color: #45a049;
+  }
+
+  /* Styles for lightbox */
+  .lightbox {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Added to position elements vertically */
+  }
+
+  .lightbox img {
+    max-width: 80%;
+    max-height: 60%; /* Adjusted height to leave space for description */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: zoom 0.6s ease;
+  }
+
+  .image-description {
+    color: #fff;
+    margin-top: 10px;
+  }
+
+  @keyframes zoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+  }
+
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 768px) {
+    .gallery {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+  }
+</style>
+</head>
+<body>
+<div class="filter-buttons">
+  <button onclick="filterImages('all')">All</button>
+  <button onclick="filterImages('ieee')">IEEE Events</button>
+  <button onclick="filterImages('competetion')">Competetions</button>
+  <button onclick="filterImages('university')">University</button>
+  <button onclick="filterImages('photography')">Photography</button>
+</div>
+<div class="gallery" id="gallery">
+  <div class="image organizations">
+    <img src="gallery/bies.jpg" alt="Beautiful landscape" onclick="openLightbox('gallery/bies.jpg', 'Beautiful landscape')">
+  </div>
+  <div class="image organizations">
+    <img src="gallery/bies2.jpg" alt="Cute animals" onclick="openLightbox('gallery/bies2.jpg', 'Cute animals')">
+  </div>
+  <div class="image university">
+    <img src="gallery/bnmpc_fest.jpg" alt="Urban cityscape" onclick="openLightbox('gallery/bnmpc_fest.jpg', 'Urban cityscape')">
+  </div>
+  <div class="image competetion">
+    <img src="gallery/brs.jpg" alt="Scenic nature" onclick="openLightbox('gallery/brs.jpg', 'Scenic nature')">
+  </div>
+  <div class="image competetion">
+    <img src="gallery/brs2.jpg" alt="Wildlife photography" onclick="openLightbox('gallery/brs2.jpg', 'Wildlife photography')">
+  </div>
+  <div class="image university">
+    <img src="gallery/defence_supervisor.jpg" alt="City skyline" onclick="openLightbox('gallery/defence_supervisor.jpg', 'City skyline')">
+  </div>
+  <div class="image university">
+    <img src="gallery/defence.jpg" alt="City skyline" onclick="openLightbox('gallery/defence.jpg', 'City skyline')">
+  </div>
+  <div class="image competetion">
+    <img src="gallery/du.jpg" alt="City skyline" onclick="openLightbox('gallery/du.jpg', 'City skyline')">
+  </div>
+  <div class="image competetion">
+    <img src="gallery/du_2.jpg" alt="City skyline" onclick="openLightbox('gallery/du_2.jpg', 'City skyline')">
+  </div>
+  <div class="image competetion">
+    <img src="gallery/du_3.jpg" alt="City skyline" onclick="openLightbox('gallery/du_3.jpg', 'City skyline')">
+  </div>
+  <div class="image competetion">
+    <img src="gallery/du_prize.jpg" alt="City skyline" onclick="openLightbox('gallery/du_prize.jpg', 'City skyline')">
+  </div>
+  <div class="image university">
+    <img src="gallery/electricity_dhaka.jpg" alt="City skyline" onclick="openLightbox('gallery/electricity_dhaka.jpg', 'City skyline')">
+  </div>
+  <div class="image competetion">
+    <img src="gallery/gaze.jpg" alt="City skyline" onclick="openLightbox('gallery/gaze.jpg', 'City skyline')">
+  </div>
+  <div class="image competetion">
+    <img src="gallery/gaze2.jpg" alt="City skyline" onclick="openLightbox('gallery/gaze2.jpg', 'City skyline')">
+  </div>
+  <div class="image competetion">
+    <img src="gallery/gaze3.jpg" alt="City skyline" onclick="openLightbox('gallery/gaze3.jpg', 'City skyline')">
+  </div>
+  <div class="image competetion">
+    <img src="gallery/gaze4.jpg" alt="City skyline" onclick="openLightbox('gallery/gaze4.jpg', 'City skyline')">
+  </div>
+  <div class="image ieee">
+    <img src="gallery/ic4me2.jpg" alt="City skyline" onclick="openLightbox('gallery/ic4me2.jpg', 'City skyline')">
+  </div>
+  <div class="image ieee">
+    <img src="gallery/ic4me2_2.jpg" alt="City skyline" onclick="openLightbox('gallery/ic4me2_2.jpg', 'City skyline')">
+  </div>
+  <div class="image ieee">
+    <img src="gallery/ic4me2_3.jpg" alt="City skyline" onclick="openLightbox('gallery/ic4me2_3.jpg', 'City skyline')">
+  </div>
+  <div class="image ieee">
+    <img src="gallery/ic4me2_4.jpg" alt="City skyline" onclick="openLightbox('gallery/ic4me2_4.jpg', 'City skyline')">
+  </div>
+  <div class="image ieee">
+    <img src="gallery/ic4me2_volunteers.jpg" alt="City skyline" onclick="openLightbox('gallery/ic4me2_volunteers.jpg', 'City skyline')">
+  </div>
+  <div class="image ieee">
+    <img src="gallery/ieee.jpg" alt="City skyline" onclick="openLightbox('gallery/ieee.jpg', 'City skyline')">
+  </div>
+  <div class="image ieee">
+    <img src="gallery/ieee_2.jpg" alt="City skyline" onclick="openLightbox('gallery/ieee_2.jpg', 'City skyline')">
+  </div>
+  <div class="image ieee">
+    <img src="gallery/ieee_3.jpg" alt="City skyline" onclick="openLightbox('gallery/ieee_3.jpg', 'City skyline')">
+  </div>
+  <div class="image ieee">
+    <img src="gallery/ieee_4.jpg" alt="City skyline" onclick="openLightbox('gallery/ieee_4.jpg', 'City skyline')">
+  </div>
+  <div class="image ieee">
+    <img src="gallery/ieee_excom.jpg" alt="City skyline" onclick="openLightbox('gallery/ieee_excom.jpg', 'City skyline')">
+  </div>
+  <div class="image ieee">
+    <img src="gallery/ieee.jpg" alt="City skyline" onclick="openLightbox('gallery/ieee.jpg', 'City skyline')">
+  </div>
+  <div class="image university">
+    <img src="gallery/industrial_tour.jpg" alt="City skyline" onclick="openLightbox('gallery/industrial_tour.jpg', 'City skyline')">
+  </div>
+  <div class="image university">
+    <img src="gallery/industrial_tour2.jpg" alt="City skyline" onclick="openLightbox('gallery/industrial_tour2.jpg', 'City skyline')">
+  </div>
+  <div class="image competetion">
+    <img src="gallery/microsoft.jpg" alt="City skyline" onclick="openLightbox('gallery/microsoft.jpg', 'City skyline')">
+  </div>
+  <div class="image competetion">
+    <img src="gallery/mist.jpg" alt="City skyline" onclick="openLightbox('gallery/mist.jpg', 'City skyline')">
+  </div>
+  <div class="image competetion">
+    <img src="gallery/mist_2.jpg" alt="City skyline" onclick="openLightbox('gallery/mist_2.jpg', 'City skyline')">
+  </div>
+  <div class="image competetion">
+    <img src="gallery/mobile_games.jpg" alt="City skyline" onclick="openLightbox('gallery/mobile_games.jpg', 'City skyline')">
+  </div>
+  <div class="image competetion">
+    <img src="gallery/nsf.jpg" alt="City skyline" onclick="openLightbox('gallery/nsf.jpg', 'City skyline')">
+  </div>
+  <div class="image competetion">
+    <img src="gallery/nsf_2.jpg" alt="City skyline" onclick="openLightbox('gallery/nsf_2.jpg', 'City skyline')">
+  </div>
+  <div class="image university">
+    <img src="gallery/paper.jpg" alt="City skyline" onclick="openLightbox('gallery/paper.jpg', 'City skyline')">
+  </div>
+  <div class="image university">
+    <img src="gallery/paper2.jpg" alt="City skyline" onclick="openLightbox('gallery/paper2.jpg', 'City skyline')">
+  </div>
+  <div class="image competetion">
+    <img src="gallery/presentation_2.jpg" alt="City skyline" onclick="openLightbox('gallery/presentation_2.jpg', 'City skyline')">
+  </div>
+  <div class="image university">
+    <img src="gallery/project_lab_meetup.jpg" alt="City skyline" onclick="openLightbox('gallery/project_lab_meetup.jpg', 'City skyline')">
+  </div>
+  <div class="image competetion">
+    <img src="gallery/presentation_prize.jpg" alt="City skyline" onclick="openLightbox('gallery/presentation_prize.jpg', 'City skyline')">
+  </div>
+  <div class="image ieee">
+    <img src="gallery/ras_certificate.jpg" alt="City skyline" onclick="openLightbox('gallery/ras_certificate.jpg', 'City skyline')">
+  </div>
+  <div class="image ieee">
+    <img src="gallery/ras_crest.jpg" alt="City skyline" onclick="openLightbox('gallery/ras_crest.jpg', 'City skyline')">
+  </div>
+  <div class="image ieee">
+    <img src="gallery/ras_excom.jpg" alt="City skyline" onclick="openLightbox('gallery/ras_excom.jpg', 'City skyline')">
+  </div>
+  <div class="image ieee">
+    <img src="gallery/ras_frame.jpg" alt="City skyline" onclick="openLightbox('gallery/ras_frame.jpg', 'City skyline')">
+  </div>
+  <div class="image ieee">
+    <img src="gallery/ras_meeting.jpg" alt="City skyline" onclick="openLightbox('gallery/ras_meeting.jpg', 'City skyline')">
+  </div>
+  <div class="image ieee">
+    <img src="gallery/ras_meeting_2.jpg" alt="City skyline" onclick="openLightbox('gallery/ras_meeting_2.jpg', 'City skyline')">
+  </div>
+  <div class="image ieee">
+    <img src="gallery/ras_memory.jpg" alt="City skyline" onclick="openLightbox('gallery/ras_memory.jpg', 'City skyline')">
+  </div>
+  <div class="image ieee">
+    <img src="gallery/ras_soccerbot.jpg" alt="City skyline" onclick="openLightbox('gallery/ras_soccerbot.jpg', 'City skyline')">
+  </div>
+  <div class="image ieee">
+    <img src="gallery/ras_soccerbot_2.jpg" alt="City skyline" onclick="openLightbox('gallery/ras_soccerbot_2.jpg', 'City skyline')">
+  </div>
+  <div class="image ieee">
+    <img src="gallery/ras_yearend.jpg" alt="City skyline" onclick="openLightbox('gallery/ras_yearend.jpg', 'City skyline')">
+  </div>
+  <div class="image competetion">
+    <img src="gallery/sci-club.jpg" alt="City skyline" onclick="openLightbox('gallery/sci-club.jpg', 'City skyline')">
+  </div>
+  <div class="image city">
+    <img src="gallery/sparrso.jpg" alt="City skyline" onclick="openLightbox('gallery/sparrso.jpg', 'City skyline')">
+  </div>
+  <div class="image university">
+    <img src="gallery/uni.jpg" alt="City skyline" onclick="openLightbox('gallery/uni.jpg', 'City skyline')">
+  </div>
+  <div class="image university">
+    <img src="gallery/uni2.jpg" alt="City skyline" onclick="openLightbox('gallery/uni2.jpg', 'City skyline')">
+  </div>
+  <div class="image university">
+    <img src="gallery/uni3.jpg" alt="City skyline" onclick="openLightbox('gallery/uni3.jpg', 'City skyline')">
+  </div>
+  <div class="image university">
+    <img src="gallery/uni4.jpg" alt="City skyline" onclick="openLightbox('gallery/uni4.jpg', 'City skyline')">
+  </div>
+  <div class="image university">
+    <img src="gallery/uni5.jpg" alt="City skyline" onclick="openLightbox('gallery/uni5.jpg', 'City skyline')">
+  </div>
+  <div class="image university">
+    <img src="gallery/uni6.jpg" alt="City skyline" onclick="openLightbox('gallery/uni6.jpg', 'City skyline')">
+  </div>
+  <div class="image university">
+    <img src="gallery/uni7.jpg" alt="City skyline" onclick="openLightbox('gallery/uni7.jpg', 'City skyline')">
+  </div>
+  <div class="image ieee">
+    <img src="gallery/wsr.jpg" alt="City skyline" onclick="openLightbox('gallery/wsr.jpg', 'City skyline')">
+  </div>
+  <div class="image ieee">
+    <img src="gallery/wsr_2.jpg" alt="City skyline" onclick="openLightbox('gallery/wsr_2.jpg', 'City skyline')">
+  </div>
+  <div class="image ieee">
+    <img src="gallery/wsr_3.jpg" alt="City skyline" onclick="openLightbox('gallery/wsr_3.jpg', 'City skyline')">
+  </div>
+  <div class="image ieee">
+    <img src="gallery/wsr_4.jpg" alt="City skyline" onclick="openLightbox('gallery/wsr_4.jpg', 'City skyline')">
+  </div>
+  <div class="image ieee">
+    <img src="gallery/wsr_5.jpg" alt="City skyline" onclick="openLightbox('gallery/wsr_5.jpg', 'City skyline')">
+  </div>
+  <div class="image ieee">
+    <img src="gallery/wsr_6.jpg" alt="City skyline" onclick="openLightbox('gallery/wsr_6.jpg', 'City skyline')">
+  </div>
+  <div class="image ieee">
+    <img src="gallery/wsr_7.jpg" alt="City skyline" onclick="openLightbox('gallery/wsr_7.jpg', 'City skyline')">
+  </div>
+  <div class="image ieee">
+    <img src="gallery/wsr_combined.jpg" alt="City skyline" onclick="openLightbox('gallery/wsr_combined.jpg', 'City skyline')">
+  </div>
+  <div class="image ieee">
+    <img src="gallery/wsr_combined2.jpg" alt="City skyline" onclick="openLightbox('gallery/wsr_combined2.jpg', 'City skyline')">
+  </div>
+  <div class="image ieee">
+    <img src="gallery/wsr_prizegiving.jpg" alt="City skyline" onclick="openLightbox('gallery/wsr_prizegiving.jpg', 'City skyline')">
+  </div>
+</div>
+<div class="lightbox" id="lightbox">
+  <span class="close" onclick="closeLightbox()">&times;</span>
+  <img src="" alt="Popup Image" id="lightbox-image">
+  <div id="image-description" class="image-description"></div>
+</div>
+<script>
+  // Hide lightbox initially
+  document.getElementById('lightbox').style.display = 'none';
+
+  // Image index for navigation
+  let currentImageIndex = 0;
+
+  function filterImages(tag) {
+    const images = document.querySelectorAll('.image');
+    images.forEach(image => {
+      if (tag === 'all' || image.classList.contains(tag)) {
+        image.style.display = 'block';
+      } else {
+        image.style.display = 'none';
+      }
+    });
+  }
+
+  function openLightbox(imageSrc, description) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    const imageDescription = document.getElementById('image-description');
+
+    lightboxImage.src = imageSrc;
+    imageDescription.textContent = description;
+    lightbox.style.display = 'flex'; // Changed to flex for centering
+
+    // Set current image index
+    const allImages = document.querySelectorAll('.image');
+    allImages.forEach((image, index) => {
+      if (image.querySelector('img').src === imageSrc) {
+        currentImageIndex = index;
+      }
+    });
+  }
+
+  function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    lightbox.style.display = 'none';
+  }
+
+  // Keyboard navigation
+  document.addEventListener('keydown', function(event) {
+    const lightbox = document.getElementById('lightbox');
+    if (lightbox.style.display === 'flex') {
+      if (event.key === 'ArrowLeft') {
+        navigateImages(-1);
+      } else if (event.key === 'ArrowRight') {
+        navigateImages(1);
+      }
+    }
+  });
+
+  // Click navigation
+  document.getElementById('lightbox-image').addEventListener('click', function(event) {
+    navigateImages(1);
+  });
+
+  function navigateImages(direction) {
+    const allImages = document.querySelectorAll('.image');
+    currentImageIndex += direction;
+    if (currentImageIndex >= allImages.length) {
+      currentImageIndex = 0;
+    } else if (currentImageIndex < 0) {
+      currentImageIndex = allImages.length - 1;
+    }
+    const imageSrc = allImages[currentImageIndex].querySelector('img').src;
+    const imageDescription = allImages[currentImageIndex].querySelector('img').alt;
+    document.getElementById('lightbox-image').src = imageSrc;
+    document.getElementById('image-description').textContent = imageDescription;
+  }
+</script>
+</body>
+</html>

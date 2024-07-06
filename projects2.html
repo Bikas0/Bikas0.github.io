@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bipin's Projects</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 0;
+        color: #333;
+    }
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+    .project {
+        margin-bottom: 40px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #eee;
+    }
+    .project img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 20px auto;
+        border-radius: 12px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+    .project img:hover {
+        transform: scale(1.05);
+    }
+    .project h2 {
+        margin-top: 0;
+        color: #007bff;
+        font-weight: bold;
+    }
+    .project h3 {
+        margin-top: 5px;
+        color: #555;
+    }
+    .project p {
+        margin-top: 5px;
+        color: #777;
+    }
+    .project .btn {
+        display: inline-block;
+        margin-right: 10px;
+        padding: 6px 12px; /* Updated padding */
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border: none;
+        border-radius: 4px; /* Reduced border radius */
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        font-size: 14px; /* Adjusted font size */
+    }
+    .project .btn:hover {
+        background-color: #5bc0de; /* Light blue color */
+    }
+    .project h2 a,
+    .project h3 a {
+        color: inherit; /* Inherit the color from parent */
+        text-decoration: none; /* Remove underline */
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="project" id="project1">
+        <h2>ML | DL | NLP | Computer Vision | GenAI</h2>
+    
+
+        
+        <h3 id="sentiment">Bengali Sentiment Analysis using LSTM, BiLSTM, GRU Models</h3>
+        <img src="project_images/bn-sentiment.png" alt="Project 1 Image">
+        <p align="justify">This project centers on Bangla sentiment analysis, leveraging a neural network model fortified with data 
+            augmentation techniques. With Convolutional and Bidirectional LSTM layers at its core, the model attains an impressive 
+            <b>test accuracy of 90.31%</b>. By classifying Bangla text into Positive, Negative, and Neutral sentiments, the model adeptly 
+            captures the intricate nuances of sentiment expression. Data augmentation emerges as a pivotal strategy for dataset 
+            balance, bolstering the model's capacity to generalize across diverse sentiment patterns. This endeavor underscores the 
+            pivotal role of advanced neural network architectures and data augmentation methodologies in precisely discerning 
+            sentiment in Bangla text, offering invaluable insights for applications necessitating nuanced sentiment comprehension in the Bangla language.</p>
+        <a href="https://github.com/bipin-saha/BanglaNLP-Sentiment-Analysis" class="btn" target="_blank">GitHub</a>
+        <!-- <a href="https://www.youtube.com/watch?v=project1" class="btn" target="_blank">YouTube</a> -->
+
+    
+        
+        <h3 id="summarize"> Text2Text Generation and Summarization using Pegasus Model </h3>
+        <img src="project_images/text2textsum.png" alt="Project 1 Image">
+        <p align="justify">This project utilizes the advanced capabilities of the Pegasus Text to Text Generation model to automate the 
+            summarization of employee working contribution logs, aiming to distill key insights efficiently. By inputting verbose logs 
+            into the Pegasus model, concise and coherent summaries are generated that encapsulate the essential points of each entry. 
+            The obtained summaries serve to provide decision-makers with quick overviews of employees' contributions, progress, and challenges. 
+            Through rigorous evaluation using the ROUGE metric, the approach achieves commendable scores, with <b>ROUGE-1 at 0.311323, ROUGE-2 at 
+            0.082163, ROUGE-L at 0.218457, and ROUGE-Lsum at 0.218986</b>. These scores attest to the effectiveness of the model in capturing the 
+            essence of the original logs. By integrating Pegasus into the workflow of handling employee logs, organizations stand to streamline 
+            summarization processes, facilitating more efficient decision-making, performance evaluation, and feedback provision while freeing 
+            up valuable time for managerial and HR tasks.</p>
+        <a href="https://github.com/bipin-saha/Employee_Task_Summarization" class="btn" target="_blank">GitHub</a>
+        <!-- <a href="https://www.youtube.com/watch?v=project1" class="btn" target="_blank">YouTube</a> -->
+        <!--
+        
+            <h3 id="trocr"> Handwritten Medical Prescription Digitalization </h3>
+        <div style="text-align: center;">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/q5dI3oArw6o?si=nzRXw_yuSu3AT-0-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <p align="justify">The project initiates with a rigorous segmentation process, utilizing advanced image processing techniques to 
+            isolate unstructured handwritten prescriptions from their original documents. This segmentation involves sophisticated algorithms 
+            to separate the prescription text from its background and any extraneous elements, thereby preparing the text for further analysis. 
+            Following segmentation, the segmented prescription images undergo a meticulous extraction procedure to identify and isolate individual 
+            lines and words. This extraction process employs techniques such as contour detection and bounding box localization to precisely 
+            delineate each textual element within the prescription, ensuring accurate input for subsequent OCR processing. These initial stages of 
+            segmentation and extraction lay the foundation for subsequent text recognition and correction phases utilizing the TrOCR and text-to-text 
+            generation models, respectively.</p>
+        <a href="https://github.com/bipin-saha/Medical-Handwritten-Prescription-Recognition" class="btn" target="_blank">GitHub</a>
+         <a href="https://www.youtube.com/watch?v=project1" class="btn" target="_blank">YouTube</a>
+        
+        -->
+        <!--
+
+        <h3 id="bntransformerocr"> Bangla Handwritten Text Extraction from Land Records </h3>
+        <img src="project1.jpg" alt="Project 1 Image">
+        <p align="justify">The Bangla Handwriting Recognition project employs a cutting-edge Transformer-based model, featuring a pre-trained ResNet152 encoder for 
+            robust feature extraction from handwritten Bangla character images. Leveraging positional encodings and masking mechanisms, the model's 
+            Transformer decoder accurately predicts sequences of characters, aided by sine positional encodings for enhanced spatial awareness. With 
+            adjustable parameters for vocabulary length and maximum text length, along with dimensions optimized for performance, this project delivers 
+            an efficient and versatile solution for accurately recognizing handwritten Bangla characters, catering to diverse applications such as document 
+            digitization and language processing.</p>
+        <a href="https://github.com/project1" class="btn" target="_blank">GitHub</a>
+        <a href="https://www.youtube.com/watch?v=project1" class="btn" target="_blank">YouTube</a>
+        
+        -->
+
+        <h3 id="gaze"> Appearance Based Eye Gaze Estimation and MultiLangual Keyboard </h3>
+        <img src="project_images/gaze.png" alt="Project 1 Image">
+        <p align="justify">The project presents a real-time eye gaze tracking interface designed for standard web or smartphone cameras, capable of 
+            operating in diverse environments while accommodating natural head movements. Utilizing an active appearance method, the system accurately 
+            extracts features from eye gaze images, specifically focusing on separating sclera pixel areas from masked eye images. Through performance 
+            evaluations employing decision tree, random forest, and extra tree classifiers, our approach achieved an approximate <b>98% accuracy across 13 
+            targets</b>, demonstrating its effectiveness. This versatile solution holds promise for various applications in human-computer interaction, 
+            robotics, and medical science, addressing the need for precise eye gaze tracking in unconstrained settings.</p>
+        <a href="https://github.com/project1" class="btn" target="_blank">GitHub</a>
+        <a href="https://www.youtube.com/watch?v=project1" class="btn" target="_blank">YouTube</a>
+        
+        <h3 id="selfdriving"> End to End Behavioral Cloning of Self Driving Car (Udacity, Simulation) </h3>
+        <div style="text-align: center;">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/6YWNVJvWPik?si=lP9vwfnQrH1kSBU2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <p align="justify">The project entails constructing a comprehensive self-driving car system by implementing behavioral cloning with a meticulously designed 
+            convolutional neural network (CNN) architecture. The CNN is crafted with multiple convolutional layers followed by dense layers, utilizing 
+            the 'elu' activation function for nonlinear transformations. Training data, consisting of images captured from the car's viewpoint alongside 
+            corresponding steering angles, are preprocessed and utilized to train the CNN via behavioral cloning techniques. Additionally, a 
+            Proportional-Integral-Derivative (PID) controller is integrated to govern the car's speed output, ensuring stability and safety. Tuning 
+            parameters such as proportional gain (kp), integral gain (ki), and derivative gain (kd) are meticulously adjusted to fine-tune the controller's 
+            performance. Through seamless integration of these components, the system achieves real-time autonomous navigation, exemplifying the fusion of 
+            deep learning and control theory to propel self-driving car technology to new heights of precision and reliability.</p>
+        <a href="https://github.com/project1" class="btn" target="_blank">GitHub</a>
+        <a href="https://www.youtube.com/watch?v=project1" class="btn" target="_blank">YouTube</a>
+        
+        <h3 id="tatasteel"> Slab Bend Detection and Tracking (Collaboration : TataSteel) </h3>
+        <div style="text-align: center;">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/_Ctov5KLsPs?si=Z3p_e-9RRxw8tiiM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <p align="justify">The project is a real-time video monitoring system designed for industrial applications, primarily focusing on detecting anomalies such as bends in metal 
+            slabs during production. Implemented using Python with libraries such as OpenCV, tkinter, and PyTorch, the system integrates live video feeds from multiple 
+            camera sources. Each frame is processed using a YOLO (You Only Look Once) model to detect anomalies. Detected anomalies are displayed alongside relevant 
+            information such as camera number, slab position, timestamp, and confidence level on a graphical user interface built with tkinter. Additionally, the system 
+            features functionalities including user authentication, database management for storing and filtering logged data, and a section for recording IP camera 
+            streaming details for integration into the monitoring system. The interface is designed for intuitive navigation with buttons for home, details list, 
+            settings, user management, and logout functionalities.</p>
+        <a href="https://github.com/project1" class="btn" target="_blank">GitHub</a>
+        <a href="https://www.youtube.com/watch?v=project1" class="btn" target="_blank">YouTube</a>
+
+        <h3 id="tatasteel"> Lane Detection using Computer Vision </h3>
+        <!--<h3><a href="#tatasteel"> Slab Bend Detection and Tracking (Collaboration : TataSteel) </a> </h3>-->
+        <img src="project_images/lane.png" alt="Project 1 Image">
+        <p align="justify">The project entails the implementation of a robust lane detection system using OpenCV in Python. By employing a series of image processing techniques, 
+            including grayscale conversion, Gaussian blur, Canny edge detection, and Hough Transformation, the system accurately identifies lane lines within road 
+            images or video streams. It intelligently selects regions of interest, detects straight lines, and averages the detected lines to provide a clear 
+            representation of lane markings. This system serves as a crucial component in autonomous driving systems, aiding in lane-keeping and navigation tasks, 
+            while also serving as a valuable tool for research in computer vision and image processing domains.</p>
+        <a href="https://github.com/project1" class="btn" target="_blank">GitHub</a>
+        <a href="https://www.youtube.com/watch?v=project1" class="btn" target="_blank">YouTube</a>
+    </div>
+    <div class="project" id="project2">
+        <h2>Robotics | Embedded Systems</h2>
+        <h3 id="kuka"> KUKA Robot's Object Sorting on Conveyor </h3>
+        <div style="text-align: center;">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/dbTIQIRSQns?si=AEJQDpYuYJBw2QZo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <p align="justify">This project aims to implement object sorting using a KUKA robot on a conveyor system. Leveraging 
+            inverse kinematics, the robot's movement is coordinated for efficient object handling. A color sensor integrated 
+            into the CoppeliaSim environment is employed to identify green-colored objects on the conveyor. Once detected, 
+            the robot's gripper is utilized to pick up the identified objects from the conveyor belt and transfer them onto 
+            another conveyor belt, facilitating seamless sorting operations.</p>
+        <a href="https://github.com/project1" class="btn" target="_blank">GitHub</a>
+        <a href="https://www.youtube.com/watch?v=project1" class="btn" target="_blank">YouTube</a>
+        
+        <h3 id="rrt"> RRT Path Planning Algorithm (Simulation) </h3>
+        <!-- <img src="project1.jpg" alt="Project 1 Image"> -->
+        <div style="text-align: center;">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/OnCe3VK2WyI?si=rxB6WD7MWhpLrBtE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <p align="justify">The "Rapidly-exploring Random Tree (RRT) Path Planning Simulation" project provides a Python 
+            implementation of the RRT algorithm for path planning in a two-dimensional environment with obstacles. 
+            It consists of modules defining classes for managing the map, obstacles, and RRT graph, along with a driver 
+            program executing the RRT algorithm to find a path from start to goal positions while avoiding obstacles. 
+            The simulation, powered by Pygame, offers a visual representation of the RRT tree construction and displays 
+            the final path upon completion, serving as an educational tool for understanding motion planning principles.</p>
+        <a href="https://github.com/bipin-saha/RRT-Path-Planning-Algorithm" class="btn" target="_blank">GitHub</a>
+        <!-- <a href="https://www.youtube.com/watch?v=project1" class="btn" target="_blank">YouTube</a> -->
+        
+        <h3 id="landmine"> Landmine Detection and Desposal Robot </h3>
+        <!-- <img src="project1.jpg" alt="Project 1 Image"> -->
+        <div style="text-align: center;">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/1bPrUW3Peik?si=ipeUKoirCxoCBlFa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <p align="justify">A Landmine Detecting Bot has been developed, featuring a 4-wheeler car design capable of autonomously 
+            navigating challenging terrains using sonar sensors to evade obstacles. Equipped with a moving metal detector covering
+             a 180-degree range, it efficiently detects landmines and sends alerts to the base station upon detection, accompanied 
+             by a distinctive sound signal for confirmation. Controlled via smartphone for manual operation, the bot utilizes an 
+             Arduino UNO microcontroller for functionality and maintains a lightweight design to minimize potential damage from 
+             landmines. Continuous data transmission to the base station ensures data retrieval in the event of bot destruction, 
+             facilitating future research and development efforts.</p>
+        <a href="https://github.com/project1" class="btn" target="_blank">GitHub</a>
+        <a href="https://www.youtube.com/watch?v=project1" class="btn" target="_blank">YouTube</a>
+
+
+        <h3 id="drone"> Teleoperated Quadcopter for Aerial Mapping (Gravity Destroyer) </h3>
+        <!--<h3><a href="#tatasteel"> Slab Bend Detection and Tracking (Collaboration : TataSteel) </a> </h3>-->
+        <div style="text-align: center;">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/oWhApeoo-xA?si=xcE6v8cvYDkeGrXn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <p align="justify">Gravity Destroyer is a quadcopter drone developed by team Sparkers with unique features including exceptional 
+            stability, enabled by four brushless outrunner motors and 20A ESCs, allowing stable photography and videography. Equipped with
+             Compass, humidity, Free Falling, and Autopilot sensors, it provides diverse data for weather forecasting. Controlled via 
+             radio transmitter or telemetry support, it utilizes Ardupilot 2.8 Pro as its brain for efficient wireless coding. Powered 
+             by a 27C Lithium Polymer battery, it offers a flight time of 20-25 minutes, capable of operating within a 2km radius and 
+             lifting up to 10 km Omnidirectional. It integrates seamlessly with landmine detector BoT, forming a manual or automatic 
+             team to detect and diffuse landmines while providing crucial area imagery.</p>
+        <a href="https://github.com/project1" class="btn" target="_blank">GitHub</a>
+        <a href="https://www.youtube.com/watch?v=project1" class="btn" target="_blank">YouTube</a>
+
+
+        
+        
+    </div>
+    <!-- Add more projects as needed -->
+</div>
+
+<script>
+    // JavaScript for smooth scrolling to anchor links
+    document.querySelectorAll('.project h2 a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

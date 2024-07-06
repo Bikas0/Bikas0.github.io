@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .column {
+            width: 49%;
+        }
+
+        .project-container {
+            background-color: #fff;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .project {
+            margin-bottom: 20px;
+        }
+
+        .project img {
+            max-width: 100%;
+            border-radius: 4px;
+        }
+
+        .project .description {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+            text-align: justify;
+        }
+
+        .image-column {
+        width: 100%; /* Set the width of the image column */
+        }
+
+        img {
+        width: 100%; /* Make the image fill its container */
+        height: auto; /* Maintain the aspect ratio */
+        padding: 5px 5px;
+    
+        }
+
+        
+
+        .video-container {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        padding-top: 30px;
+        height: 0;
+        overflow: hidden;
+        }
+
+        .video-container iframe,
+        .video-container object,
+        .video-container embed 
+        .img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        }
+
+        button {
+        padding: 5px 5px;
+        font-size: 16px;
+        background-color: #3498db; /* Set the background color */
+        color: #ffffff; /* Set the text color */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease; /* Add a smooth transition effect */
+        }
+
+        /* Change the button color on hover */
+        button:hover {
+        background-color: #2980b9;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="column">
+            <div class="project-container">
+                <div class="project">
+                    <iframe width="640" height="360" src="https://www.youtube.com/embed/6YWNVJvWPik?si=twis4mt2-MqGdYOk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <div class="description">
+                        <h3>Behavioral Cloning of Self Driving Car (Udacity, Simulation)</h3>
+                        This project, titled above, has an objective to train a model to drive a car autonomously on a simulated track. The ability of the model to drive the car is learned from cloning the behaviour of a human driver. Training data is gotten from examples of a human driving in the simulator, then fed into a deep learning network which learns the response (steering angle) for every encountered frame in the simulation. In other words, the model is trained to predict an appropriate steering angle for every frame while driving. The model is then validated on a new track to check for generalization of the learned features for performing steering angle prediction.
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="project-container">
+                <div class="project">
+                    <img src="project_images\rrt.png" alt="Robot RRT Path Planning (Simulation)" width="426" height="240">
+                    <div class="description">
+                        <h3>Robot RRT Path Planning (Simulation)</h3>
+                        The tree is constructed incrementally from samples drawn randomly from
+                        the search space and is inherently biased to grow towards large unsearched
+                        areas of the problem.
+                    </div>
+                </div>
+            </div>
+            <div class="project-container">
+                <div class="project">
+                    <img src="project_images\drone.jpg" alt="Teleoperated Quadcopter for Aerial Mapping" width="426" height="240">
+                    <div class="description">
+                        <h3>Teleoperated Quadcopter for Aerial Mapping</h3>
+                        Build a four‐rotor quadcopter which provides 20 minutes of flight time. The
+                        project’s purpose was aerial mapping. Omnidirectional control range – 10KM.
+                        IMU, and GPS provide hovering stability. Gird mapping is used for path planning.
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="project-container">
+                <div class="project">
+                    <img src="project_images\vehicle.jpg" alt="Native Vehicle Detection using Deep Learning">
+                    <div class="description">
+                        <h3>Native Vehicle Detection using Deep Learning</h3>
+                        State of the art deep-learning models has been used in this research to create a native vehicle identification system The dataset consists of over 14,500 images containing more than 72,000 instances of vehicles, classified into 17 distinct vehicle classes. The detection task is performed using a combination of YOLO (You Only Look Once) models, including RetinaNet, YOLO v5, v6, v7, and v8. The trained models have demonstrated an accuracy of 88% in identifying and localizing vehicles accurately.
+                    </div>
+                </div>
+            </div>
+            <div class="project-container">
+                <div class="project">
+                    <img src="project_images\eye.png" alt="Appearance Based Eye Gaze Classification and Multilingual Keyboard">
+                    <div class="description">
+                        <h3>Appearance Based Eye Gaze Classification and Multilingual Keyboard</h3>
+                        This paper proposes a real-time eye gaze tracking interface based on an active appearance method using a simple web or smartphone camera in an unconstrained environment, where natural head movements have been taken into account. Here, feature extraction from an eye gaze image has been performed by separating the sclera pixel area from the masked eye image. The performance evaluation has been accomplished using decision tree, random forest, and extra tree classifiers. Over 13 targets, the proposed approach has an approximate 98% accuracy with extra tree classifier. The proposed approach may be beneficial to different eye gazed tracking applications in the field of human-computer interaction, robotics, and medical science.
+                    </div>
+                </div>
+            </div>
+            <div class="project-container">
+                <div class="project">
+                    <img src="web_server_queue.jpg" alt="Customer Queue Management System">
+                    <div class="description">
+                        In this context, demonstrated a micro web-based approach to the development of a Queue Management System (QMS) using Python and Flask. The serving system is accessible through a simple web browser inside a local area network. At the customer end, they can apply for a token to be entered in the queue based on types of configurable service requirements, for example, withdrawal, deposition, and transfer (in the baking system) by validating queue input and checking the prediction of waiting time via averaging time analysis, recent serving status and calling notification. Besides, the server-side involves counter queue management and allocation of customers to the non-occupied counters based on diffused queuing enhanced first come first method. System applications are helpful in the pandemic situations where individuals will not have to gather and wait for a long time, but instead, will get notifications on their smartphones.
+                    </div>
+                </div>
+            </div>
+            <div class="project-container">
+                <div class="project">
+                    <img src="web_server_queue.jpg" alt="Two Axis Solar Tracker Powered Smart Irrigation System">
+                    <div class="description">
+                        The Two-Axis Solar Powered Smart Irrigation System is an innovative solution designed to optimize irrigation processes while maximizing energy efficiency. The system utilizes two SG90 servos for solar tracking, ensuring optimal positioning of solar panels throughout the day to harness maximum solar energy. The solar panels charge a battery, which in turn powers the irrigation pumps, enabling irrigation even during periods of low sunlight. The system incorporates soil sensors to continuously monitor the moisture levels in the soil. These sensors send signals to an Arduino microcontroller, which processes the data and determines the irrigation requirements based on the soil moisture levels. When the soil moisture falls below a certain threshold, the Arduino triggers a relay, activating the irrigation motor.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
