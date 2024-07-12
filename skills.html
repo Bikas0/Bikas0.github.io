@@ -64,9 +64,66 @@
 
     <link rel="stylesheet" href="assets/css/style.css" />
 
-    <!-- Head  -->
+
+
+    <style>
+      /* Custom styles for navbar and wrapper */
+      .navbar {
+        overflow: hidden;
+        background-color: #20212b;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        text-align: center; /* Center align the links */
+      }
+  
+      .navbar a {
+        display: inline-block; /* Ensure links are inline */
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+  
+      .navbar a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+  
+      .wrapper {
+        margin-top: 70px; /* Adjust as needed to avoid content hiding under navbar */
+        padding-bottom: 50px; /* Padding to ensure content doesn't reach the very bottom */
+        min-height: calc(100vh - 70px - 50px); /* Ensure wrapper takes up at least the full height of the viewport minus the footer height */
+        box-sizing: border-box; /* Ensure padding and border are included in the height */
+      }
+  
+      .copyright {
+        text-align: center;
+        font-size: 0.9em;
+        color: #f2f2f2;
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        background-color: #20212b;
+        padding: 10px 0;
+      }
+    </style>
+
+        <!-- Head  -->
+
   </head>
   <body>
+    <!-- Navbar -->
+    <div class="navbar">
+      <a href="index.html">Home</a>
+      <a href="skills.html#Certifications">Certifications</a>
+      <a href="projects.html">Projects</a>
+      <a href="#research">Research</a>
+      <a href="#about-me">About Me</a>
+    </div>
     <script src="assets/js/vanilla-back-to-top.min.js"></script>
     <script>
       addBackToTop({
@@ -210,7 +267,7 @@
 
 
       <!-- Skills -->
-        <h2 id="skills">Certifications</h2>
+        <h2 id="Certifications">Certifications</h2>
         <ul>
           <li>
             <a href="https://www.coursera.org/account/accomplishments/verify/QZWJAYGXZVY8" target="_blank"><strong>Generative AI with Large Language Models</strong> - Coursera</a>
@@ -242,26 +299,19 @@
 
         </ul>
 
-        
-
-
-        
-
-        <div class="page__footer-copyright">
+        <!-- Copyright Notice -->
+        <div class="copyright">
           &copy; 2024 Md Bikasuzzaman.
         </div>
       </section>
 
 
 
-      <!-- <footer>
+       <!-- <footer>
         <div class="social-icons">
-
-          
           <a href="https://www.linkedin.com/in/shohanursobuj/" target="_blank">
             <i class="fab fa-linkedin-in"></i>
           </a>
-          
           
           <a href="https://scholar.google.com/citations?user=tBc62IMAAAAJ&hl=en" target="_blank">
             <i class="ai ai-google-scholar" style="font-size:1.6rem"></i>
@@ -269,7 +319,7 @@
           </a>
           <a href="https://www.researchgate.net/profile/Md-Shohanur-Sobuj" target="_blank">
             <i class="fab fa-researchgate"></i>
-          </a>                       
+          </a>                   
           <a href="https://github.com/ShohanurSobuj" target="_blank">
             <i class="fab fa-github"></i>
           </a>
@@ -278,7 +328,20 @@
         <br>
         <br>
       </footer> -->
+
+
     </div>
-    <script src="/assets/js/scale.fix.js"></script>
+    <!--<script src="/assets/js/scale.fix.js"></script> -->
+
+    <!-- Scripts -->
+    <script src="assets/js/vanilla-back-to-top.min.js"></script>
+    <script>
+      addBackToTop({
+        backgroundColor: "#fff",
+        innerHTML: "Back to Top",
+        textColor: "#333",
+      });
+    </script>
+    <script src="assets/js/scale.fix.js"></script>
   </body>
 </html>

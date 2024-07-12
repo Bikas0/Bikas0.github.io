@@ -3,176 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            display: flex;
-            justify-content: space-around;
-            padding: 20px;
-        }
-
-        .column {
-            width: 49%;
-        }
-
-        .project-container {
-            background-color: #fff;
-            padding: 20px;
-            margin: 10px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .project {
-            margin-bottom: 20px;
-        }
-
-        .project img {
-            max-width: 100%;
-            border-radius: 4px;
-        }
-
-        .project .description {
-            margin-top: 10px;
-            font-size: 14px;
-            color: #555;
-            text-align: justify;
-        }
-
-        .image-column {
-        width: 100%; /* Set the width of the image column */
-        }
-
-        img {
-        width: 100%; /* Make the image fill its container */
-        height: auto; /* Maintain the aspect ratio */
-        padding: 5px 5px;
-    
-        }
-
-        
-
-        .video-container {
-        position: relative;
-        padding-bottom: 56.25%; /* 16:9 aspect ratio */
-        padding-top: 30px;
-        height: 0;
-        overflow: hidden;
-        }
-
-        .video-container iframe,
-        .video-container object,
-        .video-container embed 
-        .img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        }
-
-        button {
-        padding: 5px 5px;
-        font-size: 16px;
-        background-color: #3498db; /* Set the background color */
-        color: #ffffff; /* Set the text color */
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s ease; /* Add a smooth transition effect */
-        }
-
-        /* Change the button color on hover */
-        button:hover {
-        background-color: #2980b9;
-        }
-
-    </style>
+    <title>Bikasuzzaman's Projects</title>
+    <link rel="stylesheet" href="assets/css/project_styles.css">
 </head>
 <body>
-    <!--
-    <div class="container">
-        <div class="column">
-            <div class="project-container">
-                <div class="project">
-                    <iframe width="640" height="360" src="https://www.youtube.com/embed/6YWNVJvWPik?si=twis4mt2-MqGdYOk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    <div class="description">
-                        <h3>Behavioral Cloning of Self Driving Car (Udacity, Simulation)</h3>
-                        This project, titled above, has an objective to train a model to drive a car autonomously on a simulated track. The ability of the model to drive the car is learned from cloning the behaviour of a human driver. Training data is gotten from examples of a human driving in the simulator, then fed into a deep learning network which learns the response (steering angle) for every encountered frame in the simulation. In other words, the model is trained to predict an appropriate steering angle for every frame while driving. The model is then validated on a new track to check for generalization of the learned features for performing steering angle prediction.
-                        
-                    </div>
-                    
-                </div>
+    <header>
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="skills.html#Certifications">Certifications</a>
+            <a href="projects.html">Projects</a>
+            <a href="#research">Research</a>
+            <a href="https://Bikas0.github.io/resume" target="_blank">Résumé</a>
+            <a href="#about-me">About Me</a>
+          </div>
+    </header>
+    <br>
+    <main>
+        <section class="projects">
+            <div class="filters">
+                <button>Machine Learning</button>
+                <button>Computer Vision</button>
+                <button>Generative AI Software Development</button>
             </div>
-            <div class="project-container">
-                <div class="project">
-                    <img src="project_images\rrt.png" alt="Robot RRT Path Planning (Simulation)" width="426" height="240">
-                    <div class="description">
-                        <h3>Robot RRT Path Planning (Simulation)</h3>
-                        The tree is constructed incrementally from samples drawn randomly from
-                        the search space and is inherently biased to grow towards large unsearched
-                        areas of the problem.
-                    </div>
-                </div>
-            </div>
-            <div class="project-container">
-                <div class="project">
-                    <img src="project_images\drone.jpg" alt="Teleoperated Quadcopter for Aerial Mapping" width="426" height="240">
-                    <div class="description">
-                        <h3>Teleoperated Quadcopter for Aerial Mapping</h3>
-                        Build a four‐rotor quadcopter which provides 20 minutes of flight time. The
-                        project’s purpose was aerial mapping. Omnidirectional control range – 10KM.
-                        IMU, and GPS provide hovering stability. Gird mapping is used for path planning.
+            <div class="projects-container">
 
-                    </div>
+                <div class="project">
+                    <h2>Handwritten Prescription Digitalization using Layout Analysis and OCR</h2>
+                    <img src="project_images/prescription.png" alt="Secure Sum Protocol" loading="lazy">
+                    <a href="#">View on Github</a>
+                    <p>PaddleOCR, TrOCR, YOLO, Gemma-7B</p>
+                    <p align="justify">The project focuses on digitizing handwritten prescriptions through sophisticated layout analysis and OCR technologies. Employing a segmented model for precise line-by-line segmentation, it extracts crucial details including unique identification numbers, medication names, frequencies, quantities, and medical histories. An optimized OCR model is utilized for accurate information extraction from handwritten text, while a generative model transforms raw data into structured outputs, enhancing efficiency and precision in medication management and healthcare record-keeping.</p>
                 </div>
-            </div>
-        </div>
 
-        <div class="column">
-            <div class="project-container">
                 <div class="project">
-                    <img src="project_images\vehicle.jpg" alt="Native Vehicle Detection using Deep Learning">
-                    <div class="description">
-                        <h3>Native Vehicle Detection using Deep Learning</h3>
-                        State of the art deep-learning models has been used in this research to create a native vehicle identification system The dataset consists of over 14,500 images containing more than 72,000 instances of vehicles, classified into 17 distinct vehicle classes. The detection task is performed using a combination of YOLO (You Only Look Once) models, including RetinaNet, YOLO v5, v6, v7, and v8. The trained models have demonstrated an accuracy of 88% in identifying and localizing vehicles accurately.
-                    </div>
+                    <h2>Enhancing Image Generation with Deep Convolutional GANs</h2>
+                    <img src="project_images/DCGAN.gif" alt="DCGAN" loading="lazy">
+                    <a href="https://github.com/Bikas0/Data-Augmentation-using-DCGAN/blob/main/Deep_Convolutional_Generative_Adversarial_Network.ipynb">View on Github</a> 
+                    <p>DCGAN, Generative AI</p>
+                    <p align="justify">Developed and implemented a Deep Convolutional Generative Adversarial Network (DCGAN) using TensorFlow and Keras to generate synthetic images based on the MNIST dataset. 
+                        The project involved extensive data preprocessing, constructing and training the generator and discriminator models, and visualizing the generated images to monitor 
+                        training progress. Successfully created a GIF animation demonstrating the improvement in image quality over training epochs, showcasing proficiency in advanced neural network techniques and 
+                        practical application of GANs for image generation.. </p>
                 </div>
-            </div>
-            <div class="project-container">
+                
                 <div class="project">
-                    <img src="project_images\eye.png" alt="Appearance Based Eye Gaze Classification and Multilingual Keyboard">
-                    <div class="description">
-                        <h3>Appearance Based Eye Gaze Classification and Multilingual Keyboard</h3>
-                        This paper proposes a real-time eye gaze tracking interface based on an active appearance method using a simple web or smartphone camera in an unconstrained environment, where natural head movements have been taken into account. Here, feature extraction from an eye gaze image has been performed by separating the sclera pixel area from the masked eye image. The performance evaluation has been accomplished using decision tree, random forest, and extra tree classifiers. Over 13 targets, the proposed approach has an approximate 98% accuracy with extra tree classifier. The proposed approach may be beneficial to different eye gazed tracking applications in the field of human-computer interaction, robotics, and medical science.
-                    </div>
+                    <h2>Abstract Text Summarization using Large Language Model (LLM)</h2>
+                    <img src="project_images/text2textsum.png" alt="TCPSwift">
+                    <img src="project_images/rouge_scores.png" alt="TCPSwift">
+                    <a href="https://huggingface.co/spaces/Bikas0/Abstract-Text-Summarizer">Live</a> | <a href="https://github.com/Bikas0/Text-Summarization">View on Github</a> 
+                    <p>Google Pegasus, LLM</p>
+                    <p align="justify">This project utilizes the advanced capabilities of the Pegasus Text to Text Generation model to automate the 
+                        summarization of employee working contribution logs, aiming to distill key insights efficiently. By inputting verbose logs 
+                        into the Pegasus model, concise and coherent summaries are generated that encapsulate the essential points of each entry. 
+                        The obtained summaries serve to provide decision-makers with quick overviews of employees' contributions, progress, and challenges. 
+                        Through rigorous evaluation using the ROUGE metric, the approach achieves commendable scores, with <b>ROUGE-1 at 0.613, ROUGE-2 at 
+                        0.373, ROUGE-L at 0.557, and ROUGE-Lsum at 0.556</b>. These scores attest to the effectiveness of the model in capturing the 
+                        essence of the original logs. By integrating Pegasus into the workflow of handling employee logs, organizations stand to streamline 
+                        summarization processes, facilitating more efficient decision-making, performance evaluation, and feedback provision while freeing 
+                        up valuable time for managerial and HR tasks. </p>
                 </div>
-            </div>
-            <div class="project-container">
+                
+                
                 <div class="project">
-                    <img src="web_server_queue.jpg" alt="Customer Queue Management System">
-                    <div class="description">
-                        In this context, demonstrated a micro web-based approach to the development of a Queue Management System (QMS) using Python and Flask. The serving system is accessible through a simple web browser inside a local area network. At the customer end, they can apply for a token to be entered in the queue based on types of configurable service requirements, for example, withdrawal, deposition, and transfer (in the baking system) by validating queue input and checking the prediction of waiting time via averaging time analysis, recent serving status and calling notification. Besides, the server-side involves counter queue management and allocation of customers to the non-occupied counters based on diffused queuing enhanced first come first method. System applications are helpful in the pandemic situations where individuals will not have to gather and wait for a long time, but instead, will get notifications on their smartphones.
-                    </div>
+                    <h2>Users Feedback Aspect Classification of Ecomerce Products</h2>
+                    <img src="project_images/user_aspect.png" alt="Project 1 Image">
+                    <img src="project_images/user_aspect_Huggingface.png" alt="Project 1 Image">
+                    <a href="https://huggingface.co/spaces/Bikas0/Users-Feedback-Aspect-Classification-of-Ecomerce-Product">Live</a> | <a href="https://github.com/Bikas0/Multi-Label-Text-Classification-using-LLM">View on Github</a> 
+                    <p>Llama3, Phi3, BERT</p>
+                    <p align="justify">The project focuses on developing a robust classification model to categorize user feedback into various aspects such as price, 
+                        packaging, product quality, delivery, shelf life, service, and seller performance. Utilizing a <b>BERT-based model</b> for <b>multi-label text classification</b>, 
+                        the project aims to accurately identify the aspect of each feedback entry. The model's performance was evaluated with <b>precision, recall, and 
+                        F1-score</b> metrics across different aspects: <b>price (0.85, 0.89, 0.87), packaging (0.86, 0.91, 0.88), product (0.86, 0.84, 0.85), rider (0.78, 0.70, 0.74), 
+                        delivery (0.90, 0.88, 0.89), shelf (1.00, 1.00, 1.00), service (0.50, 0.25, 0.33), and seller (0.87, 0.92, 0.90)</b>. Overall, the model demonstrated strong 
+                        performance with a <b>micro average F1-score of 0.84, a macro average F1-score of 0.81, and a weighted average F1-score of 0.83 across 415 feedback samples</b>. </p>
                 </div>
+                <!-- Add more projects as needed -->
             </div>
-            <div class="project-container">
-                <div class="project">
-                    <img src="web_server_queue.jpg" alt="Two Axis Solar Tracker Powered Smart Irrigation System">
-                    <div class="description">
-                        The Two-Axis Solar Powered Smart Irrigation System is an innovative solution designed to optimize irrigation processes while maximizing energy efficiency. The system utilizes two SG90 servos for solar tracking, ensuring optimal positioning of solar panels throughout the day to harness maximum solar energy. The solar panels charge a battery, which in turn powers the irrigation pumps, enabling irrigation even during periods of low sunlight. The system incorporates soil sensors to continuously monitor the moisture levels in the soil. These sensors send signals to an Arduino microcontroller, which processes the data and determines the irrigation requirements based on the soil moisture levels. When the soil moisture falls below a certain threshold, the Arduino triggers a relay, activating the irrigation motor.
-                    </div>
-                </div>
-            </div>
-        </div>
+        </section>
+        
+    </main>
+    <script src="scripts.js"></script>
+
+    <!-- Copyright Notice -->
+    <div class="copyright">
+        &copy; 2024 Md Bikasuzzaman.
     </div>
--->
+
+    <!-- Scripts -->
+    <script src="assets/js/vanilla-back-to-top.min.js"></script>
+    <script>
+        addBackToTop({
+        backgroundColor: "#fff",
+        innerHTML: "Back to Top",
+        textColor: "#333",
+        });
+    </script>
+    <script src="assets/js/scale.fix.js"></script>
 </body>
 </html>
