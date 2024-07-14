@@ -1,0 +1,22 @@
+name: Trigger to the Portfolio
+on:
+  push:
+    branches: [main]
+jobs:
+  Trigger-to-the-Portfolio:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v2
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v1
+        with:
+          github_token:${{secrets.Token}}
+          publish_file: ./index.html
+        
+        
+    
+  
+  
+  
