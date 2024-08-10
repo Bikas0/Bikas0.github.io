@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bikasuzzaman's Projects</title>
+    <link rel="stylesheet" href="assets/css/project_styles.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="research.html">Research</a>
+            <a href="resume.html" target="_blank">Résumé</a>
+          </div>
+    </header>
+    <br>
+    <br>
+    <br>
+    <main>
+        <section class="projects">
+            <div class="filters">
+                <button>Machine Learning</button>
+                <button>Computer Vision</button>
+                <button>Generative AI Software Development</button>
+            </div>
+            <div class="projects-container">
+                
+                <div class="project">
+                    <h2 id="HWOCR">Handwritten Prescription Digitalization using Layout Analysis and OCR</h2>
+                    <img src="assets\project_images\prescription.png" alt="Secure Sum Protocol" loading="lazy">
+                    <a href="#">View on Github</a>
+                    <p>PaddleOCR, TrOCR, YOLO, Gemma-7B</p>
+                    <p align="justify">The project focuses on digitizing handwritten prescriptions through sophisticated layout analysis and OCR technologies. Employing a segmented model for precise line-by-line segmentation, it extracts crucial details including unique identification numbers, medication names, frequencies, quantities, and medical histories. An optimized OCR model is utilized for accurate information extraction from handwritten text, while a generative model transforms raw data into structured outputs, enhancing efficiency and precision in medication management and healthcare record-keeping.</p>
+                </div>
+
+                <div class="project">
+                    <h2 id="DCGAN">Enhancing Image Generation with Deep Convolutional GANs</h2>
+                    <img src="assets\project_images\DCGAN.gif" alt="DCGAN" loading="lazy">
+                    <a href="https://github.com/Bikas0/Data-Augmentation-using-DCGAN/blob/main/Deep_Convolutional_Generative_Adversarial_Network.ipynb">View on Github</a> 
+                    <p>DCGAN, Generative AI</p>
+                    <p align="justify">Developed and implemented a Deep Convolutional Generative Adversarial Network (DCGAN) using TensorFlow and Keras to generate synthetic images based on the MNIST dataset. 
+                        The project involved extensive data preprocessing, constructing and training the generator and discriminator models, and visualizing the generated images to monitor 
+                        training progress. Successfully created a GIF animation demonstrating the improvement in image quality over training epochs, showcasing proficiency in advanced neural network techniques and 
+                        practical application of GANs for image generation.. </p>
+                </div>
+                
+                <div class="project">
+                    <h2 id="ATS">Abstract Text Summarization using Large Language Model (LLM)</h2>
+                    <img src="assets\project_images\text2textsum.png" alt="TCPSwift">
+                    <img src="assets\project_images\rouge_scores.png" alt="TCPSwift">
+                    <a href="https://huggingface.co/spaces/Bikas0/Abstract-Text-Summarizer">Live</a> | <a href="https://github.com/Bikas0/Text-Summarization">View on Github</a> 
+                    <p>Google Pegasus, LLM</p>
+                    <p align="justify">This project utilizes the advanced capabilities of the Pegasus Text to Text Generation model to automate the 
+                        summarization of employee working contribution logs, aiming to distill key insights efficiently. By inputting verbose logs 
+                        into the Pegasus model, concise and coherent summaries are generated that encapsulate the essential points of each entry. 
+                        The obtained summaries serve to provide decision-makers with quick overviews of employees' contributions, progress, and challenges. 
+                        Through rigorous evaluation using the ROUGE metric, the approach achieves commendable scores, with <b>ROUGE-1 at 0.613, ROUGE-2 at 
+                        0.373, ROUGE-L at 0.557, and ROUGE-Lsum at 0.556</b>. These scores attest to the effectiveness of the model in capturing the 
+                        essence of the original logs. By integrating Pegasus into the workflow of handling employee logs, organizations stand to streamline 
+                        summarization processes, facilitating more efficient decision-making, performance evaluation, and feedback provision while freeing 
+                        up valuable time for managerial and HR tasks. </p>
+                </div>
+                
+                
+                <div class="project">
+                    <h2 id="ABE">Aspect-Based Evaluation of Bengali User Feedback on E-commerce Platforms</h2>
+                    <img src="assets\project_images\user_aspect.png" alt="Project 1 Image">
+                    <img src="assets\project_images\user_aspect_Huggingface.png" alt="Project 1 Image">
+                    <a href="https://huggingface.co/spaces/Bikas0/Aspect-Based-Evaluation-of-Bengali-User-Feedback-on-E-commerce-Platforms">Live</a> | <a href="https://github.com/Bikas0/Multi-Label-Text-Classification-using-LLM">View on Github</a> 
+                    <p>Llama3, Phi3, BERT</p>
+                    <p align="justify">The project focuses on developing a robust classification model to categorize user feedback into various aspects such as price, 
+                        packaging, product quality, delivery, shelf life, service, and seller performance. Utilizing a <b>BERT-based model</b> for <b>multi-label text classification</b>, 
+                        the project aims to accurately identify the aspect of each feedback entry. The model's performance was evaluated with <b>precision, recall, and 
+                        F1-score</b> metrics across different aspects: <b>price (0.85, 0.89, 0.87), packaging (0.86, 0.91, 0.88), product (0.86, 0.84, 0.85), rider (0.78, 0.70, 0.74), 
+                        delivery (0.90, 0.88, 0.89), shelf (1.00, 1.00, 1.00), service (0.50, 0.25, 0.33), and seller (0.87, 0.92, 0.90)</b>. Overall, the model demonstrated strong 
+                        performance with a <b>micro average F1-score of 0.84, a macro average F1-score of 0.81, and a weighted average F1-score of 0.83 across 415 feedback samples</b>. </p>
+                </div>
+
+                <div class="project">
+                    <h2 id="FRSR">Forecasting Retail Store Revenue</h2>
+                    <img src="assets\project_images\timeseries.png" alt="compare">
+                    <img src="assets\project_images\futureforcasting.png" alt="forecast">
+                    <a href="https://github.com/Bikas0/Forecasting-Retail-Store-Revenue/tree/main">View on Github</a> 
+                    <p>SARIMA, LSTM, RF, EDA</p>
+                    <p align="justify">This project aims to forecast the monthly revenue of a retail store using advanced machine learning techniques. 
+                        Leveraging historical sales data, we employ both a <b>Seasonal Autoregressive Integrated Moving Average (SARIMA)</b> model and 
+                        a <b>Long Short-Term Memory (LSTM)</b> model to capture complex temporal patterns and trends. The project involves data preprocessing, 
+                        feature engineering, model training, and validation to ensure accurate predictions. The <b>SARIMA model achieved a Root Mean Square Error (RMSE) 
+                        of 529.56, while the LSTM model attained a Root Mean Square Error (RMSE) of 323.89</b>. Visualizations of actual versus predicted sales provide
+                        insights into the models' performance. By accurately forecasting revenue, this project helps the retail store in strategic planning, 
+                        inventory management, and financial decision-making, ultimately driving business growth and efficiency.</p>
+                </div>
+
+                <div class="project">
+                    <h2 id="BTC">Brain Tumor classification Using CNN in MRI Imaging</h2>
+                    <img src="assets\project_images\BRAIN_TUMOUR.png" alt="Brain" style="width: 80%; max-width: 800px;">
+                    <a href="https://github.com/Bikas0/Brain-Tumor-Classification">View on Github</a> 
+                    <p>CNN, Medical Imaging</p>
+                    <p align="justify">This project focuses on the development and implementation of a Convolutional Neural Network (CNN) for the classification of brain MRI 
+                        images to detect the presence of tumors. The dataset consists of MRI scans categorized into two classes: images without tumors and images with tumors.
+                        The CNN model is constructed with multiple layers, including Conv2D for convolutional operations, MaxPooling2D for down-sampling, Activation layers for 
+                        non-linear transformations, Dropout for regularization to prevent overfitting, and Dense layers for the final classification. The images are preprocessed 
+                        to a uniform input size, and the model is trained over several epochs with continuous monitoring of training and validation loss to evaluate performance.
+                        The sample output image clearly indicates the presence of a tumor, underscoring the model's efficacy. This project exemplifies 
+                        the integration of deep learning in medical diagnostics, offering a promising tool for early detection and accurate diagnosis of brain tumors, ultimately aiming 
+                        to improve patient care and outcomes.</p>
+                </div>
+
+                <div class="project">
+                    <h2 id="XAI">Explainable AI: Visualizing Model Predictions with SHAP and LIME</h2>
+                    <img src="assets\project_images\XAI.jpg" alt="xai" style="width: 80%; max-width: 800px;">
+                    <a href="https://github.com/Bikas0/Explainable-AI-XAI">View on Github</a> 
+                    <p>XAI, SHAP, LIME</p>
+                    <p align="justify">This Explainable AI project utilizes SHAP (SHapley Additive exPlanations) and LIME (Local Interpretable Model-agnostic Explanations) 
+                        to visualize and interpret model predictions across tabular, text, and image data. For tabular data, a SHAP summary plot illustrates feature contributions 
+                        to model predictions, enhancing transparency and interpretability. LIME is employed for text classification, highlighting important words and their impact 
+                        on prediction probabilities, providing clear explanations of the model's decision-making process. SHAP values are used to explain CNN model predictions on 
+                        MNIST digit images, indicating influential pixels and aiding in understanding deep learning models. These visual explanations build trust and allow users 
+                        to effectively understand, trust, and debug their machine learning models.</p>
+                </div>
+                <!-- Add more projects as needed -->
+            </div>
+        </section>
+        
+    </main>
+    <script src="scripts.js"></script>
+
+    <!-- Copyright Notice -->
+    <div class="copyright">
+        &copy; 2024 Md Bikasuzzaman.
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/vanilla-back-to-top.min.js"></script>
+    <script>
+        addBackToTop({
+        backgroundColor: "#fff",
+        innerHTML: "Back to Top",
+        textColor: "#333",
+        });
+    </script>
+    <script src="assets/js/scale.fix.js"></script>
+</body>
+</html>
