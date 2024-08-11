@@ -144,26 +144,21 @@
         <h1>Research</h1>
     </header>
     <div class="container">
-        <div class="paper featured-paper">
+        <div class="paper">
             <h2>A Transformer-Based Approach for Summarizing Employee Logs</h2>
-            <img id="main-image-1" class="main-image" src="https://via.placeholder.com/400x200" alt="Featured Research Paper Image">
+            <img id="main-image-2" class="main-image" src="assets\img\textsum_overview.jpeg" alt="Research Paper 2 Image">
             <div class="thumbnail-row">
-                <img class="thumbnail" src="https://via.placeholder.com/400x200" alt="Thumbnail 1" onclick="openModal('https://via.placeholder.com/400x200')">
-                <img class="thumbnail" src="https://via.placeholder.com/400x200/007acc" alt="Thumbnail 2" onclick="openModal('https://via.placeholder.com/400x200/007acc')">
-                <img class="thumbnail" src="https://via.placeholder.com/400x200/ff0000" alt="Thumbnail 3" onclick="openModal('https://via.placeholder.com/400x200/ff0000')">
+                <img class="thumbnail" src="assets\img\textsum_rouge.png" alt="Thumbnail 2" onclick="openModal('research_images/textsum_rouge.png')">
+                <img class="thumbnail" src="assets\img\textsum_loss.png" alt="Thumbnail 3" onclick="openModal('research_images/textsum_loss.png')">
             </div>
-            <p align="justify">Abstract: —In the realm of organizational productivity, efficient handling and summarization of employee daily logs are pivotal.
-                This study employs the Google Pegasus model to enhance the summarization of these logs, focusing on capturing long-range
-                dependencies and generating coherent summaries. Traditional summarization approaches often struggle with complex document
-                structures, underscoring the need for advanced methodologies. A comprehensive dataset of daily worklogs from a software
-                development firm has been curated, documenting tasks, progress, and outcomes. This dataset has been augmented using advanced
-                Generative AI techniques to ensure robust context understanding. The fine-tuning process of the Pegasus model included hyperpa
-                rameter tuning, optimizing for an input token length of 1024 and an output token length of 128. The contributions of this
-                research include thorough dataset preparation, advanced data augmentation, and meticulous model fine-tuning, resulting in pre
-                cise and effective summarization outputs tailored to professional environments.</p>
+            <p align="justify">Abstract: Efficient summarization of employee daily logs is crucial for organizational productivity. This study utilizes the Google Pegasus model 
+                to enhance summarization, addressing traditional challenges with complex document structures. A dataset of daily work logs from a software 
+                development firm was augmented with advanced Generative AI techniques. The Pegasus model was fine-tuned with an input token length of 1024 and 
+                an output token length of 128. Evaluated using the ROUGE metric, the model achieved a ROUGE-1 score of 0.613, ROUGE-2 score of 0.373, ROUGE-L score 
+                of 0.557, and ROUGE-Lsum score of 0.556, demonstrating strong performance in generating coherent and contextually relevant summaries.</p>
             <button class="toggle-button" onclick="toggleInsights(1)">Show Insights</button>
             <div class="insights" id="insights-1" style="display: none;">
-                <h3>"In Review Phase": Submitted to the `Japanese Journal of Statistics and Data Science`</h3>
+                <h3>"Submitted in Springer Conference. July 2024."</h3>
             </div>
         </div>
         <!--
