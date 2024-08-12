@@ -170,6 +170,9 @@ h6 {
   height: 25px;
   margin-right: 10px; /* Adjust spacing between image and text */
 }
+a.Statement-of-courses {
+  color: red; /* Change 'red' to any color you prefer */
+}
 
 .nav-menu a,
 .nav-menu a:focus {
