@@ -161,6 +161,16 @@ h6 {
   white-space: nowrap;
 }
 
+.degree-image {
+  display: flex;
+  align-items: center;
+}
+.degree-small-image {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px; /* Adjust spacing between image and text */
+}
+
 .nav-menu a,
 .nav-menu a:focus {
   display: flex;
