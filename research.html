@@ -151,12 +151,21 @@
                 <img class="thumbnail" src="assets\img\textsum_rouge.png" alt="Thumbnail 2" onclick="openModal('research_images/textsum_rouge.png')">
                 <img class="thumbnail" src="assets\img\textsum_loss.png" alt="Thumbnail 3" onclick="openModal('research_images/textsum_loss.png')">
             </div>
-            <p align="justify">Abstract: Efficient summarization of employee daily logs is crucial for organizational productivity. This study utilizes the Google Pegasus model 
+            <p align="justify">Abstract: Efficient summarization of text is crucial for organizational productivity. This study utilizes the Google Pegasus model 
+                to enhance summarization, addressing traditional challenges with complex document structures. A dataset of text was augmented with advanced Generative AI techniques. The Pegasus model was fine-tuned with an input token length of 1024 and 
+                an output token length of 128. Evaluated using the ROUGE metric, the model achieved a ROUGE-1 score of 0.613, ROUGE-2 score of 0.373, ROUGE-L score 
+                of 0.557, and ROUGE-Lsum score of 0.556, demonstrating strong performance in generating coherent and contextually relevant summaries.</p>
+            <button class="toggle-button" onclick="toggleInsights(1)">Show Insights</button>
+
+
+            <!--
+             <p align="justify">Abstract: Efficient summarization of employee daily logs is crucial for organizational productivity. This study utilizes the Google Pegasus model 
                 to enhance summarization, addressing traditional challenges with complex document structures. A dataset of daily work logs from a software 
                 development firm was augmented with advanced Generative AI techniques. The Pegasus model was fine-tuned with an input token length of 1024 and 
                 an output token length of 128. Evaluated using the ROUGE metric, the model achieved a ROUGE-1 score of 0.613, ROUGE-2 score of 0.373, ROUGE-L score 
                 of 0.557, and ROUGE-Lsum score of 0.556, demonstrating strong performance in generating coherent and contextually relevant summaries.</p>
             <button class="toggle-button" onclick="toggleInsights(1)">Show Insights</button>
+            -->
             <div class="insights" id="insights-1" style="display: none;">
                 <h3>"Submitted in Springer Conference. July 2024."</h3>
             </div>
