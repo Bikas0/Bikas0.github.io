@@ -1359,13 +1359,19 @@
       document.getElementById("current-year").innerHTML = `Md Bikasuzzaman (${new Date().getFullYear()})`;
     </script>
     <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
-      <script type="module">
-        import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
-        createChat({
-          webhookUrl: 'YOUR_PRODUCTION_WEBHOOK_URL'
-	});
+<script type="module">
+import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+createChat({
+  webhookUrl: 'YOUR_PRODUCTION_WEBHOOK_URL',
+  subtitle: "Start a chat, if you want to know about me 24/7.",
+  initialMessages: [
+    "My name is Md Bikasuzzaman. How can I assist you today?"
+  ]
+});
 </script>
+
   </footer><!-- End  Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
